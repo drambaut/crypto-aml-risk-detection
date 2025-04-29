@@ -174,4 +174,5 @@ cython_debug/
 .pypirc
 
 data/elliptic_bitcoin_dataset/*.csv
+results/*.csvdata/elliptic_bitcoin_dataset/*.csv
 results/*.csv
