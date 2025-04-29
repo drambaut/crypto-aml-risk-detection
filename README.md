@@ -1,26 +1,27 @@
-# Detección de Fraudes en Transacciones de Bitcoin
+# Bitcoin Transaction Fraud Detection
 
-Este proyecto implementa un sistema de detección de fraudes en transacciones de Bitcoin utilizando técnicas de aprendizaje semi-supervisado y análisis de grafos.
+This project implements a fraud detection system for Bitcoin transactions using semi-supervised learning techniques and graph analysis.
 
-## Estructura del Proyecto
+## Project Structure
 
 ```
 crypto-aml-risk-detection/
-├── config.yaml           # Archivo de configuración
-├── data/                 # Directorio para datos
-│   └── elliptic_bitcoin_dataset/  # Dataset de Bitcoin
-├── models/               # Directorio para modelos entrenados
-├── results/              # Directorio para resultados y visualizaciones
-├── src/                  # Código fuente
-│   ├── data/             # Módulos para carga y preparación de datos
-│   ├── features/         # Módulos para extracción de características
-│   ├── models/           # Módulos para modelos de aprendizaje
-│   ├── visualization/    # Módulos para visualización
-│   └── main.py           # Script principal
-└── tests/                # Pruebas unitarias
+├── config/               # Configuration directory
+│   └── config.yaml       # Configuration file
+├── data/                 # Data directory
+│   └── elliptic_bitcoin_dataset/  # Bitcoin dataset
+├── models/               # Directory for trained models
+├── results/              # Directory for results and visualizations
+├── src/                  # Source code
+│   ├── data/             # Modules for data loading and preparation
+│   ├── features/         # Modules for feature extraction
+│   ├── models/           # Modules for learning models
+│   ├── visualization/    # Modules for visualization
+│   └── main.py           # Main script
+└── tests/                # Unit tests
 ```
 
-## Requisitos
+## Requirements
 
 - Python 3.8+
 - pandas
@@ -32,45 +33,45 @@ crypto-aml-risk-detection/
 - joblib
 - pyyaml
 
-## Instalación
+## Installation
 
-1. Clonar el repositorio:
+1. Clone the repository:
 ```bash
-git clone https://github.com/tu-usuario/crypto-aml-risk-detection.git
+git clone https://github.com/your-username/crypto-aml-risk-detection.git
 cd crypto-aml-risk-detection
 ```
 
-2. Crear un entorno virtual e instalar dependencias:
+2. Create a virtual environment and install dependencies:
 ```bash
 python -m venv venv
-source venv/bin/activate  # En Windows: venv\Scripts\activate
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-3. Instalar el proyecto en modo desarrollo:
+3. Install the project in development mode:
 ```bash
 pip install -e .
 ```
 
-## Configuración
+## Configuration
 
-El proyecto utiliza un archivo de configuración YAML (`config.yaml`) para gestionar parámetros y rutas. Puedes modificar este archivo para ajustar:
+The project uses a YAML configuration file (`config/config.yaml`) to manage parameters and paths. You can modify this file to adjust:
 
-- Directorios de datos, resultados y modelos
-- Parámetros del modelo semi-supervisado
-- Parámetros de extracción de características
-- Configuración de visualización
-- Opciones de ejecución
+- Data, results, and model directories
+- Semi-supervised model parameters
+- Feature extraction parameters
+- Visualization settings
+- Execution options
 
-Ejemplo de configuración:
+Example configuration:
 ```yaml
-# Directorios
+# Directories
 directories:
   data: "data/elliptic_bitcoin_dataset"
   results: "results"
   models: "models"
 
-# Parámetros del modelo
+# Model parameters
 model:
   semi_supervised:
     n_neighbors: 10
@@ -79,54 +80,67 @@ model:
     random_state: 42
 ```
 
-## Uso
+## Usage
 
-### Ejecución Básica
+### Basic Execution
 
 ```bash
 python src/main.py
 ```
 
-### Ejecución con Parámetros Personalizados
+### Execution with Custom Parameters
 
 ```bash
-python src/main.py --config mi_config.yaml
+python src/main.py --config config/my_config.yaml
 ```
 
-### Ejecución con Argumentos de Línea de Comandos
+### Execution with Command Line Arguments
 
 ```bash
-python src/main.py --data_dir /ruta/a/datos --results_dir /ruta/a/resultados --n_components 128
+python src/main.py --data_dir /path/to/data --results_dir /path/to/results --n_components 128
 ```
 
-### Ejecución de Pruebas
+### Execution with Exploratory Data Analysis
+
+```bash
+python src/main.py --run_eda
+```
+
+### Execution without Exploratory Data Analysis
+
+```bash
+python src/main.py --skip_eda
+```
+
+## Features
+
+- **Semi-supervised Learning**: Utilizes both labeled and unlabeled data to improve fraud detection
+- **Graph Analysis**: Extracts features from the Bitcoin transaction network
+- **Feature Engineering**: Creates comprehensive feature sets from transaction data
+- **Visualization**: Generates informative visualizations of results and model performance
+- **Model Evaluation**: Provides detailed metrics and performance analysis
+
+## Results
+
+The system generates the following outputs:
+
+- Trained models saved in the `models/` directory
+- Visualizations and analysis results in the `results/` directory
+- Performance metrics and classification reports
+
+## Testing
+
+Run the unit tests with:
 
 ```bash
 python -m unittest discover tests
 ```
 
-## Flujo de Trabajo
+## License
 
-1. **Carga de Datos**: Se cargan los datos de transacciones de Bitcoin.
-2. **Análisis Exploratorio**: Se realiza un análisis exploratorio de los datos (opcional).
-3. **Extracción de Características**: Se extraen características de grafo y embeddings.
-4. **Preparación de Datos**: Se preparan los datos para el entrenamiento.
-5. **Entrenamiento del Modelo Semi-supervisado**: Se entrena un modelo para etiquetar datos no etiquetados.
-6. **Entrenamiento del Modelo Final**: Se entrena un modelo final usando todas las etiquetas.
-7. **Visualización y Evaluación**: Se generan visualizaciones y se evalúa el rendimiento del modelo.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-## Resultados
+## Acknowledgments
 
-Los resultados se guardan en el directorio `results/` e incluyen:
-
-- Visualizaciones de distribución de clases
-- Visualizaciones de métricas de red
-- Visualizaciones de importancia de características
-- Visualizaciones de distribución de predicciones
-- Métricas de rendimiento del modelo
-
-Los modelos entrenados se guardan en el directorio `models/`.
-
-## Licencia
-
-Este proyecto está licenciado bajo la Licencia MIT - ver el archivo LICENSE para más detalles.
+- The Elliptic Bitcoin dataset for providing transaction data
+- Contributors and maintainers of the libraries used in this project
