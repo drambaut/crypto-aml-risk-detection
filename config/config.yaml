@@ -1,0 +1,35 @@
+# Configuración para el proyecto de detección de fraudes en transacciones de Bitcoin
+
+# Directorios
+directories:
+  data: "data/elliptic_bitcoin_dataset"  # Directorio con los datos de entrada
+  results: "results"                     # Directorio para guardar resultados
+  models: "models"                       # Directorio para guardar modelos entrenados
+
+# Parámetros del modelo semi-supervisado
+model:
+  semi_supervised:
+    n_neighbors: 10                      # Número de vecinos para Label Propagation
+    max_iter: 1000                       # Número máximo de iteraciones para Label Propagation
+    n_estimators: 100                    # Número de árboles para Random Forest
+    random_state: 42                     # Semilla aleatoria para reproducibilidad
+  
+  final:
+    n_estimators: 100                    # Número de árboles para el modelo final
+    random_state: 42                     # Semilla aleatoria para reproducibilidad
+
+# Parámetros de extracción de características
+features:
+  n_components: 64                       # Número de componentes para SVD
+
+# Parámetros de visualización
+visualization:
+  figure_size: [12, 8]                  # Tamaño de las figuras
+  dpi: 100                              # Resolución de las figuras
+  style: "seaborn"                      # Estilo de las visualizaciones
+
+# Parámetros de ejecución
+execution:
+  run_eda: true                         # Ejecutar análisis exploratorio de datos
+  skip_eda: false                       # Saltar análisis exploratorio de datos
+  n_jobs: -1                            # Número de trabajos paralelos (-1 = todos los núcleos disponibles) 

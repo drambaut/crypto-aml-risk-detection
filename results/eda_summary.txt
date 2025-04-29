@@ -1,0 +1,38 @@
+=== RESUMEN DEL ANÁLISIS EXPLORATORIO DE DATOS ===
+
+Dimensiones de df_classes: (203769, 2)
+Dimensiones de df_edgelist: (234355, 2)
+Dimensiones de df_feats: (203769, 167)
+
+=== DISTRIBUCIÓN DE CLASES ===
+class
+unknown    157205
+2           42019
+1            4545
+Name: count, dtype: int64
+
+=== MÉTRICAS DE RED ===
+Número de nodos: 203769
+Número de aristas: 234355
+Densidad: 0.000006
+Diámetro: No conectado
+Promedio de grado: 2.30
+
+=== ANÁLISIS DE VALORES ATÍPICOS ===
+Número de valores atípicos por característica:
+feat_1          0
+feat_2      35477
+feat_3      16878
+feat_4          0
+feat_5      49725
+            ...  
+feat_162    50215
+feat_163    25913
+feat_164    25480
+feat_165    81817
+feat_166    82165
+Length: 166, dtype: int64
+
+=== ANÁLISIS DE VALORES FALTANTES ===
+Número de valores faltantes por característica:
+Series([], dtype: int64)

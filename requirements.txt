@@ -1,0 +1,66 @@
+# Core data processing and analysis
+numpy>=1.20.0
+pandas>=1.3.0
+scikit-learn>=1.0.0
+
+# Graph processing
+networkx>=2.6.0
+
+# Machine learning and explanability
+shap>=0.41.0
+joblib>=1.0.0
+
+# Deep learning
+tensorflow>=2.10.0
+
+# Progress bars and logging
+tqdm>=4.65.0
+
+# Data loading and processing
+kagglehub>=0.3.12
+
+# Visualization
+matplotlib>=3.4.0
+seaborn>=0.11.0
+
+# Development and testing
+pytest>=7.3.1
+black>=23.3.0
+flake8>=6.0.0
+isort>=5.12.0
+
+# Procesamiento de datos y análisis
+scipy>=1.7.0
+python-louvain>=0.15
+# graph-tool>=2.45  # Comentado debido a problemas de instalación en macOS
+python-igraph>=0.10.0  # Alternativa a graph-tool
+
+# Machine Learning
+xgboost>=1.4.2
+lightgbm>=3.2.1
+
+# Visualización
+plotly>=5.1.0
+dash>=2.0.0
+
+# Procesamiento de datos blockchain
+# blockchain-data>=0.1.0  # Comentado ya que no existe este paquete
+web3>=5.24.0
+# bitcoin-python>=0.10.0  # Comentado debido a problemas de compatibilidad
+bitcoinlib>=0.6.0  # Alternativa más moderna para Bitcoin
+
+# Utilidades
+python-dotenv>=0.19.0
+pyyaml>=6.0.0
+jupyter>=1.0.0
+notebook>=6.4.0
+
+# Testing
+pytest-cov>=2.12.1
+
+# Documentación
+sphinx>=4.1.2
+sphinx-rtd-theme>=0.5.2
+
+# Agregado por el colaborador
+kaggle>=1.5.0 
