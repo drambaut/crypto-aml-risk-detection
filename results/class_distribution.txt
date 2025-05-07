@@ -1,0 +1,7 @@
+=== DISTRIBUCIÓN ORIGINAL DE CLASES ===
+
+class
+unknown    157205
+2           42019
+1            4545
+Name: count, dtype: int64

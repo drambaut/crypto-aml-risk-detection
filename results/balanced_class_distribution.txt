@@ -1,0 +1,5 @@
+=== DISTRIBUCIÓN DE CLASES DESPUÉS DEL BALANCEO ===
+
+1    42019
+2    42019
+Name: count, dtype: int64

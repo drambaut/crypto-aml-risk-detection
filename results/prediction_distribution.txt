@@ -1,0 +1,5 @@
+=== DISTRIBUCIÓN DE PREDICCIONES ===
+
+2    148099
+1      9106
+Name: count, dtype: int64

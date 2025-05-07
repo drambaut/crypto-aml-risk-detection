@@ -1,0 +1,18 @@
+=== MÉTRICAS DEL MODELO SEMI-SUPERVISADO ===
+
+Distribución de clases en el conjunto de prueba:
+1    42019
+2    42019
+Name: count, dtype: int64
+
+Reporte de Clasificación:
+              precision    recall  f1-score   support
+
+           1       1.00      0.99      1.00      8404
+           2       0.99      1.00      1.00      8404
+
+    accuracy                           1.00     16808
+   macro avg       1.00      1.00      1.00     16808
+weighted avg       1.00      1.00      1.00     16808
+
+ROC AUC: 0.0001
